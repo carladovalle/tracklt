@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import LoginScreen from './LoginScreen';
 import RegistrationScreen from './RegistrationScreen';
@@ -10,8 +11,11 @@ import HistoryScreen from './HistoryScreen';
 
 export default function App() {
     return (
-        <>
-            <RegistrationScreen />
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<LoginScreen />} />
+                <Route path="/cadastro" element={<RegistrationScreen />} />
+            </Routes>
+        </BrowserRouter>
     )
 }
