@@ -10,11 +10,15 @@ import TodayScreen from './TodayScreen';
 import HistoryScreen from './HistoryScreen';
 
 export default function App() {
+
+    const [token, setToken] = React.useState("");
+
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<LoginScreen />} />
+                <Route path="/" element={<LoginScreen setToken={setToken} />} />
                 <Route path="/cadastro" element={<RegistrationScreen />} />
+                <Route path="/hoje" element={<TodayScreen token={token} />} />
             </Routes>
         </BrowserRouter>
     )

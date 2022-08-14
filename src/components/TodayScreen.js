@@ -3,9 +3,12 @@ import styled from 'styled-components';
 
 import check from "./../assets/image/check.png";
 
-export default function Habits() {
+export default function Today({token}) {
+
+    console.log(token);
+
     return (
-        <HabitsScreen>
+        <TodayScreen>
             <Subheading>
                 <Title>Segunda, 17/05</Title>
                 <TitlePhrase>Nenhum hábito concluído ainda</TitlePhrase>
@@ -28,11 +31,11 @@ export default function Habits() {
                     <img src={check} />
                 </Check>
             </Habit>
-        </HabitsScreen>
+        </TodayScreen>
     )
 }
 
-const HabitsScreen = styled.div`
+const TodayScreen = styled.div`
     width: 375px;
     height: 527px;
     background-color: #F2F2F2;
